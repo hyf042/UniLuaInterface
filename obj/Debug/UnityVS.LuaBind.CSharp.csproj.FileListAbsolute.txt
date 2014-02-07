@@ -1,0 +1,9 @@
+D:\Projects\LuaBind\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+D:\Projects\LuaBind\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+D:\Projects\LuaBind\Temp\UnityVS_bin\Debug\UnityEditor.dll
+D:\Projects\LuaBind\Temp\UnityVS_bin\Debug\UnityEngine.dll
+D:\Projects\LuaBind\Temp\UnityVS_bin\Debug\UnityEngine.xml
+D:\Projects\LuaBind\Temp\UnityVS_bin\Debug\UnityEditor.xml
+D:\Projects\LuaBind\obj\Debug\UnityVS.LuaBind.CSharp.csprojResolveAssemblyReference.cache
+D:\Projects\LuaBind\obj\Debug\Assembly-CSharp.dll
+D:\Projects\LuaBind\obj\Debug\Assembly-CSharp.pdb
