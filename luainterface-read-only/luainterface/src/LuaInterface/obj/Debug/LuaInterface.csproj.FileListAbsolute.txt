@@ -3,3 +3,8 @@ D:\Projects\LuaBind\luainterface-read-only\Built\LuaInterface.pdb
 D:\Projects\LuaBind\luainterface-read-only\luainterface\src\LuaInterface\obj\Debug\LuaInterface.csprojResolveAssemblyReference.cache
 D:\Projects\LuaBind\luainterface-read-only\luainterface\src\LuaInterface\obj\Debug\LuaInterface.dll
 D:\Projects\LuaBind\luainterface-read-only\luainterface\src\LuaInterface\obj\Debug\LuaInterface.pdb
+E:\Projects\Personal\luabind\luainterface-read-only\Built\LuaInterface.dll
+E:\Projects\Personal\luabind\luainterface-read-only\Built\LuaInterface.pdb
+E:\Projects\Personal\luabind\luainterface-read-only\luainterface\src\LuaInterface\obj\Debug\LuaInterface.csprojResolveAssemblyReference.cache
+E:\Projects\Personal\luabind\luainterface-read-only\luainterface\src\LuaInterface\obj\Debug\LuaInterface.dll
+E:\Projects\Personal\luabind\luainterface-read-only\luainterface\src\LuaInterface\obj\Debug\LuaInterface.pdb

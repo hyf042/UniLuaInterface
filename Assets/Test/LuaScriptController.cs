@@ -183,23 +183,41 @@ using UniLua;
 //    }
 //}
 
+namespace Test
+{
+    public class Bundle
+    {
+        public delegate void TestDelegate(string s);
+        public int a;
+        public int Mac { get { return a + 1; } }
+        public void test(TestDelegate cb)
+        {
+            cb("test1");
+        }
+    }
+}
+
 public class LuaScriptController : MonoBehaviour
 {
     private LuaBind.Lua lua;
 
     void Awake()
     {
-        lua = new LuaBind.Lua();
+        /*lua = new LuaBind.Lua();
 
         //lua["test"] = (CSharpFunctionDelegate)((v) => { Debug.Log("test"); return 0; });
         //lua.CallFunction("test");
         lua.RegisterFunctions(this);
         object[] ret = lua.DoString("test(1,\"hehe\")");
         int length = ret == null ? 0 : ret.Length;
-        Debug.Log(length);
+        Debug.Log(length);*/
+        var time = DateTime.Now;
+        var lua = new LuaInterface.Lua();
+        lua.DoFile("test.lua");
+        Debug.Log("use " + (DateTime.Now - time).ToString());
     }
 
-    [LuaBind.AttrLuaFunc("test")]
+    [LuaBind.LuaGlobal("test")]
     static int test<T1,T2>(T1 a, T2 b)
     {
         Debug.Log("世界真奇妙！");

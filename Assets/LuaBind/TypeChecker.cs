@@ -90,7 +90,7 @@ namespace LuaBind
                     return extractValues[typeof(string).TypeHandle.Value.ToInt64()];
                 else if (luatype == LuaType.LUA_TTABLE)
                     return extractValues[typeof(LuaTable).TypeHandle.Value.ToInt64()];
-                else if (luatype == LuaType.LUA_TUSERDATA)
+                else if (luatype == LuaType.LUA_TUSERDATA || luatype == LuaType.LUA_TLIGHTUSERDATA)
                     return extractValues[typeof(object).TypeHandle.Value.ToInt64()];
                 else if (luatype == LuaType.LUA_TFUNCTION)
                     return extractValues[typeof(LuaFunction).TypeHandle.Value.ToInt64()];

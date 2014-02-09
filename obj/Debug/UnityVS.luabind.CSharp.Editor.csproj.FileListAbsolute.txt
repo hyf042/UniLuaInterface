@@ -1,0 +1,1 @@
+E:\Projects\Personal\luabind\obj\Debug\UnityVS.luabind.CSharp.Editor.csprojResolveAssemblyReference.cache

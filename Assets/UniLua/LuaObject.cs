@@ -46,6 +46,9 @@ namespace UniLua
 				case (int)LuaType.LUA_TNUMBER: return NValue == o.NValue;
 				case (int)LuaType.LUA_TUINT64: return UInt64Value == o.UInt64Value;
 				case (int)LuaType.LUA_TSTRING: return SValue() == o.SValue();
+                //!ADD BY hyf042                    
+                case (int)LuaType.LUA_TLIGHTUSERDATA: 
+                    return System.Object.ReferenceEquals(OValue, o.OValue);
 				default: return System.Object.ReferenceEquals(OValue, o.OValue);
 			}
 		}
@@ -167,6 +170,21 @@ namespace UniLua
 			UInt64Value = 0;
 			OValue = v;
 		}
+        internal void SetUDValue(object v)
+        {
+#if DEBUG_DUMMY_TVALUE_MODIFY
+			CheckLock();
+#endif
+            //!ADD BY hyf042
+            var ud = new LuaUserDataValue();
+            ud.Value = v;
+            ud.Length = 0;
+
+            Tt = (int)LuaType.LUA_TUSERDATA;
+            NValue = 0.0;
+            UInt64Value = 0;
+            OValue = ud;
+        }
 		internal void SetClLValue(LuaLClosureValue v) {
 #if DEBUG_DUMMY_TVALUE_MODIFY
 			CheckLock();

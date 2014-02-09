@@ -92,12 +92,15 @@ namespace LuaInterface
 			LuaDLL.lua_settable(luaState, -3);
             LuaDLL.lua_replace(luaState, (int)LuaIndexes.LUA_GLOBALSINDEX);
 			translator=new ObjectTranslator(this,luaState);
+            
             LuaDLL.lua_replace(luaState, (int)LuaIndexes.LUA_GLOBALSINDEX);
 			LuaDLL.luaL_dostring(luaState, Lua.init_luanet);	// steffenj: lua_dostring renamed to luaL_dostring
 
             // We need to keep this in a managed reference so the delegate doesn't get garbage collected
             panicCallback = new LuaCSFunction(PanicCallback);
             LuaDLL.lua_atpanic(luaState, panicCallback);
+
+            int tmp = LuaDLL.lua_gettop(luaState);
 
             //LuaDLL.lua_atlock(luaState, lockCallback = new LuaCSFunction(LockCallback));
             //LuaDLL.lua_atunlock(luaState, unlockCallback = new LuaCSFunction(UnlockCallback));
@@ -992,7 +995,6 @@ namespace LuaInterface
 		{
             // We leave nothing on the stack when we are done
             int oldTop = LuaDLL.lua_gettop(luaState);
-            
 			LuaMethodWrapper wrapper=new LuaMethodWrapper(translator,target,function.DeclaringType,function);
 			translator.push(luaState,new LuaCSFunction(wrapper.call));
 

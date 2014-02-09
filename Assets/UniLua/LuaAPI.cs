@@ -87,6 +87,7 @@ namespace UniLua
 		void PushCSharpClosure( CSharpFunctionDelegate f, int n );
 		void PushValue( int index );
 		void PushGlobalTable();
+        void PushUserData( object o );
 		void PushLightUserData( object o );
 		void PushUInt64( UInt64 o );
 		bool PushThread();
@@ -1283,6 +1284,12 @@ namespace UniLua
 			ApiIncrTop();
 		}
 
+        void ILuaAPI.PushUserData(object o)
+        {
+            Top.V.SetUDValue(o);
+            ApiIncrTop();
+        }
+
 		void ILuaAPI.PushUInt64( UInt64 o )
 		{
 			Top.V.SetUInt64Value( o );
@@ -1556,6 +1563,8 @@ namespace UniLua
 
 			switch(addr.V.Tt) {
 				case (int)LuaType.LUA_TUSERDATA:
+                    //!ADD BY hyf042
+                    return addr.V.RawUValue().Value;
 					throw new System.NotImplementedException();
 				case (int)LuaType.LUA_TLIGHTUSERDATA: { return addr.V.OValue; }
 				case (int)LuaType.LUA_TUINT64: { return addr.V.UInt64Value; }

@@ -1,39 +1,22 @@
 using System;
+using UniLua;
 
 namespace LuaBind
 {
-    public class AttrLuaFunc : Attribute
+    public class LuaHelper
     {
-        private String FunctionName;
-        private String FunctionDoc;
-        private String[] FunctionParameters = null;
-
-        public AttrLuaFunc(String strFuncName, String strFuncDoc, params String[] strParamDocs)
+        public void NewMetaTable(ILuaState luaState, string name)
         {
-            FunctionName = strFuncName;
-            FunctionDoc = strFuncDoc;
-            FunctionParameters = strParamDocs;
+            luaState.PushString(name);
+            luaState.NewTable();
+            luaState.RawSet(LuaDef.LUA_REGISTRYINDEX);
+            GetMetaTable(luaState, name);
         }
 
-        public AttrLuaFunc(String strFuncName, String strFuncDoc = "")
+        public void GetMetaTable(ILuaState luaState, string name)
         {
-            FunctionName = strFuncName;
-            FunctionDoc = strFuncDoc;
-        }
-
-        public String getFuncName()
-        {
-            return FunctionName;
-        }
-
-        public String getFuncDoc()
-        {
-            return FunctionDoc;
-        }
-
-        public String[] getFuncParams()
-        {
-            return FunctionParameters;
+            luaState.PushString(name);
+            luaState.RawGet(LuaDef.LUA_REGISTRYINDEX);
         }
     }
 }

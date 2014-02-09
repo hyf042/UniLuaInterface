@@ -760,6 +760,7 @@ l_tforloop:
 			return T_GetTM( et, tm );
 		}
 
+        object tmp;
 		private void V_GetTable( StkId t, StkId key, StkId val )
 		{
 			for( int loop=0; loop<MAXTAGLOOP; ++loop ) {
@@ -781,6 +782,15 @@ l_tforloop:
 					// else will try the tag method
 				}
 				else {
+                    var tb = G.MetaTables[2];
+                    if (tb != null)
+                    {
+                        if (tmp != tb)
+                        {
+                            int haha = 1;
+                        }
+                        tmp = tb;
+                    }
 					tmObj = T_GetTMByObj(ref t.V, TMS.TM_INDEX);
 					if(tmObj.V.TtIsNil())
 						G_SimpleTypeError(ref t.V, "index" );

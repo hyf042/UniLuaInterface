@@ -13,31 +13,6 @@ using UniLua;
 
 namespace LuaBind
 {
-    /// <summary>
-    /// Marks a method, field or property to be hidden from Lua auto-completion
-    /// </summary>
-    [AttributeUsage(AttributeTargets.Method | AttributeTargets.Field | AttributeTargets.Property)]
-    public sealed class LuaHideAttribute : Attribute
-    { }
-    /// <summary>
-    /// Marks a method for global usage in Lua scripts
-    /// </summary>
-    /// <see cref="LuaRegistrationHelper.TaggedInstanceMethods"/>
-    /// <see cref="LuaRegistrationHelper.TaggedStaticMethods"/>
-    [AttributeUsage(AttributeTargets.Method)]
-    public sealed class LuaGlobalAttribute : Attribute
-    {
-        /// <summary>
-        /// An alternative name to use for calling the function in Lua - leave empty for CLR name
-        /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
-        /// A description of the function
-        /// </summary>
-        public string Description { get; set; }
-    }
-
     public class Lua
     {
         public delegate void LuaCallbackDelegate(Lua lua);
@@ -517,12 +492,12 @@ namespace LuaBind
                 foreach (Attribute attr in Attribute.GetCustomAttributes(mInfo))
                 {
                     // and if they happen to be one of our AttrLuaFunc attributes
-                    if (attr.GetType() == typeof(AttrLuaFunc))
+                    if (attr.GetType() == typeof(LuaGlobalAttribute))
                     {
-                        AttrLuaFunc pAttr = (AttrLuaFunc)attr;
+                        LuaGlobalAttribute pAttr = (LuaGlobalAttribute)attr;
 
                         // And tell the VM to register it.
-                        RegisterFunction(pAttr.getFuncName(), pTarget, mInfo);
+                        RegisterFunction(pAttr.Name, pTarget, mInfo);
                     }
                 }
             }

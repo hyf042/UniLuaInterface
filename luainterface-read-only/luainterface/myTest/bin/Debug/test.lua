@@ -1,6 +1,6 @@
-luanet.load_assembly("myTest")
-bundle_type = luanet.import_type("myTest.Bundle");
-obj = {a = 1}
-print (bundle_type)
-luanet.make_object(obj, bundle_type);
---obj:test();
+luanet.load_assembly "System"
+
+Console = luanet.import_type "System.Console"
+Math = luanet.import_type "System.Math"
+
+Console.WriteLine("sqrt(2) is {0}",Math.Sqrt(2))

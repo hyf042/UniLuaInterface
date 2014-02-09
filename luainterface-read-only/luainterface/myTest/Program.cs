@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace myTest
         public int a;
         public void test()
         {
-            Console.WriteLine(a);
+            Console.WriteLine("test1");
         }
     }
     class Program
@@ -20,9 +21,10 @@ namespace myTest
         static void Main(string[] args)
         {
             Lua lua = new Lua();
-            var bundle = new Bundle();
-            lua["a"] = new Bundle();
-            lua.DoString("print(a)");
+            lua.DoFile("test.lua");
+            /*object obj = null;
+            GCHandle handle = GCHandle.Alloc(obj);
+            Console.WriteLine(GCHandle.ToIntPtr(handle));*/
         }
     }
 }
