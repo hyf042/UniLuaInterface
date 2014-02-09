@@ -187,12 +187,12 @@ namespace Test
 {
     public class Bundle
     {
-        public delegate void TestDelegate(string s);
+        public delegate string TestDelegate(string s);
         public int a;
         public int Mac { get { return a + 1; } }
         public void test(TestDelegate cb)
         {
-            cb("test1");
+            LuaScriptController.log_text = cb("test1"); ;
         }
     }
 }
@@ -200,6 +200,7 @@ namespace Test
 public class LuaScriptController : MonoBehaviour
 {
     private LuaBind.Lua lua;
+    public static string log_text = "";
 
     void Awake()
     {
@@ -213,7 +214,8 @@ public class LuaScriptController : MonoBehaviour
         Debug.Log(length);*/
         var time = DateTime.Now;
         var lua = new LuaInterface.Lua();
-        lua.DoFile("test.lua");
+        Debug.Log("hello");
+        lua.DoString("Bundle = luanet.import_type \"Test.Bundle\";a = Bundle();a:test(function(s) return s; end)");
         Debug.Log("use " + (DateTime.Now - time).ToString());
     }
 
@@ -224,6 +226,10 @@ public class LuaScriptController : MonoBehaviour
         Debug.Log(a);
         Debug.Log(b);
         return 5;
+    }
+    void OnGUI()
+    {
+        GUI.Label(new Rect(0, 0, 100, 50), log_text);
     }
 }
 
