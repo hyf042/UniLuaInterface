@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{AC493376-FCA3-23A5-C858-C7C27A412C8B}</ProjectGuid>
+    <ProjectGuid>{80C8C0A9-2495-CAA9-1C62-A00ADEFFB507}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace></RootNamespace>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,40 +63,40 @@
     <Compile Include="Assets\LuaInterface\MethodWrapper.cs" />
     <Compile Include="Assets\LuaInterface\ObjectTranslator.cs" />
     <Compile Include="Assets\LuaInterface\ProxyType.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\ByteString.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\Coder.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\Common.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\Do.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\Dump.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LLex.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaAPI.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaAuxLib.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaBaseLib.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaBitLib.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaCoroLib.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaDebug.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaDebugLib.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaEncLib.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaFFILib.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaFile.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaFunc.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaIOLib.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaMathLib.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaObject.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaOsLib.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaPkgLib.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaState.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaStrLib.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaTable.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\LuaTableLib.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\OpCodes.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\Parser.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\TagMethod.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\ULDebug.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\Undump.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\Util.cs" />
+    <Compile Include="Assets\LuaInterface\UniLua\VM.cs" />
     <Compile Include="Assets\Test\LuaScriptController.cs" />
-    <Compile Include="Assets\UniLua\ByteString.cs" />
-    <Compile Include="Assets\UniLua\Coder.cs" />
-    <Compile Include="Assets\UniLua\Common.cs" />
-    <Compile Include="Assets\UniLua\Do.cs" />
-    <Compile Include="Assets\UniLua\Dump.cs" />
-    <Compile Include="Assets\UniLua\LLex.cs" />
-    <Compile Include="Assets\UniLua\LuaAPI.cs" />
-    <Compile Include="Assets\UniLua\LuaAuxLib.cs" />
-    <Compile Include="Assets\UniLua\LuaBaseLib.cs" />
-    <Compile Include="Assets\UniLua\LuaBitLib.cs" />
-    <Compile Include="Assets\UniLua\LuaCoroLib.cs" />
-    <Compile Include="Assets\UniLua\LuaDebug.cs" />
-    <Compile Include="Assets\UniLua\LuaDebugLib.cs" />
-    <Compile Include="Assets\UniLua\LuaEncLib.cs" />
-    <Compile Include="Assets\UniLua\LuaFFILib.cs" />
-    <Compile Include="Assets\UniLua\LuaFile.cs" />
-    <Compile Include="Assets\UniLua\LuaFunc.cs" />
-    <Compile Include="Assets\UniLua\LuaIOLib.cs" />
-    <Compile Include="Assets\UniLua\LuaMathLib.cs" />
-    <Compile Include="Assets\UniLua\LuaObject.cs" />
-    <Compile Include="Assets\UniLua\LuaOsLib.cs" />
-    <Compile Include="Assets\UniLua\LuaPkgLib.cs" />
-    <Compile Include="Assets\UniLua\LuaState.cs" />
-    <Compile Include="Assets\UniLua\LuaStrLib.cs" />
-    <Compile Include="Assets\UniLua\LuaTable.cs" />
-    <Compile Include="Assets\UniLua\LuaTableLib.cs" />
-    <Compile Include="Assets\UniLua\OpCodes.cs" />
-    <Compile Include="Assets\UniLua\Parser.cs" />
-    <Compile Include="Assets\UniLua\TagMethod.cs" />
-    <Compile Include="Assets\UniLua\ULDebug.cs" />
-    <Compile Include="Assets\UniLua\Undump.cs" />
-    <Compile Include="Assets\UniLua\Util.cs" />
-    <Compile Include="Assets\UniLua\VM.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2012\UnityVS.CSharp.targets" />
 </Project>
