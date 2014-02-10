@@ -541,7 +541,10 @@ namespace UniLuaInterface
 		{
             return callFunction(function, args, null);
 		}
-
+        public object[] CallFunction(string fullpath, params object[] args)
+        {
+            return ((LuaFunction)this[fullpath]).Call(args);
+        }
 
 		/*
 		 * Calls the object as a function with the provided arguments and

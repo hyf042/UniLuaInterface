@@ -4,7 +4,7 @@ using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UniLua;
+using UniLuaInterface;
 
 namespace Test
 {
@@ -23,21 +23,27 @@ namespace Test
 public class LuaScriptController : MonoBehaviour
 {
     public static string log_text = "";
+    Lua lua;
 
     void Awake()
     {
         var time = DateTime.Now;
-        var lua = new UniLuaInterface.Lua();
+        lua = new Lua();
         Debug.Log("hello");
-        lua.DoString("Bundle = luanet.import_type \"Test.Bundle\";a = Bundle();a:test(function(s) return s; end)");
-        UniLuaInterface.LuaTable table = (UniLuaInterface.LuaTable)(lua.DoFile("framework/main.lua")[0]);
-        ((UniLuaInterface.LuaFunction)table["awake"]).Call();
+        //lua.DoString("Bundle = luanet.import_type \"Test.Bundle\";a = Bundle();a:test(function(s) return s; end)");
+        //UniLuaInterface.LuaTable table = (UniLuaInterface.LuaTable)(lua.DoFile("framework/main.lua")[0]);
+        //((UniLuaInterface.LuaFunction)table["awake"]).Call();
+
+        lua.DoFile("test.lua");
+        lua.CallFunction("Task");
         Debug.Log("use " + (DateTime.Now - time).ToString());
     }
 
     void OnGUI()
     {
         GUI.Label(new Rect(0, 0, 100, 50), log_text);
+        if (GUI.Button(new Rect(0, 100, 100, 50), "Next"))
+            lua.CallFunction("Resume");
     }
 }
 
