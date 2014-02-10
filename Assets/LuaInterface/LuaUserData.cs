@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using UniLua;
 
-namespace LuaInterface
+namespace UniLuaInterface
 {
     public class LuaUserData : LuaBase
     {

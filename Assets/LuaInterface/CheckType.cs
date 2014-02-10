@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using UniLua;
 
-namespace LuaInterface
+namespace UniLuaInterface
 {
 	/*
 	 * Type checking and conversion functions.

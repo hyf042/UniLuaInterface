@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC493376-FCA3-23A5-C858-C7C27A412C8B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace></RootNamespace>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_IPHONE;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;UNITY_IPHONE_API;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;UNITY_IOS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_0;UNITY_4_3;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_IPHONE;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;UNITY_IPHONE_API;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;UNITY_IOS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_0;UNITY_4_3;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\LuaInterface\AssemblyInfo.cs" />
+    <Compile Include="Assets\LuaInterface\CheckType.cs" />
+    <Compile Include="Assets\LuaInterface\GenerateEventAssembly.cs" />
+    <Compile Include="Assets\LuaInterface\Lua.cs" />
+    <Compile Include="Assets\LuaInterface\LuaBase.cs" />
+    <Compile Include="Assets\LuaInterface\LuaDLL.cs" />
+    <Compile Include="Assets\LuaInterface\LuaException.cs" />
+    <Compile Include="Assets\LuaInterface\LuaFunction.cs" />
+    <Compile Include="Assets\LuaInterface\LuaGlobalAttribute.cs" />
+    <Compile Include="Assets\LuaInterface\LuaHideAttribute.cs" />
+    <Compile Include="Assets\LuaInterface\LuaRegistrationHelper.cs" />
+    <Compile Include="Assets\LuaInterface\LuaScriptException.cs" />
+    <Compile Include="Assets\LuaInterface\LuaTable.cs" />
+    <Compile Include="Assets\LuaInterface\LuaUserData.cs" />
+    <Compile Include="Assets\LuaInterface\Metatables.cs" />
+    <Compile Include="Assets\LuaInterface\MethodWrapper.cs" />
+    <Compile Include="Assets\LuaInterface\ObjectTranslator.cs" />
+    <Compile Include="Assets\LuaInterface\ProxyType.cs" />
+    <Compile Include="Assets\Test\LuaScriptController.cs" />
+    <Compile Include="Assets\UniLua\ByteString.cs" />
+    <Compile Include="Assets\UniLua\Coder.cs" />
+    <Compile Include="Assets\UniLua\Common.cs" />
+    <Compile Include="Assets\UniLua\Do.cs" />
+    <Compile Include="Assets\UniLua\Dump.cs" />
+    <Compile Include="Assets\UniLua\LLex.cs" />
+    <Compile Include="Assets\UniLua\LuaAPI.cs" />
+    <Compile Include="Assets\UniLua\LuaAuxLib.cs" />
+    <Compile Include="Assets\UniLua\LuaBaseLib.cs" />
+    <Compile Include="Assets\UniLua\LuaBitLib.cs" />
+    <Compile Include="Assets\UniLua\LuaCoroLib.cs" />
+    <Compile Include="Assets\UniLua\LuaDebug.cs" />
+    <Compile Include="Assets\UniLua\LuaDebugLib.cs" />
+    <Compile Include="Assets\UniLua\LuaEncLib.cs" />
+    <Compile Include="Assets\UniLua\LuaFFILib.cs" />
+    <Compile Include="Assets\UniLua\LuaFile.cs" />
+    <Compile Include="Assets\UniLua\LuaFunc.cs" />
+    <Compile Include="Assets\UniLua\LuaIOLib.cs" />
+    <Compile Include="Assets\UniLua\LuaMathLib.cs" />
+    <Compile Include="Assets\UniLua\LuaObject.cs" />
+    <Compile Include="Assets\UniLua\LuaOsLib.cs" />
+    <Compile Include="Assets\UniLua\LuaPkgLib.cs" />
+    <Compile Include="Assets\UniLua\LuaState.cs" />
+    <Compile Include="Assets\UniLua\LuaStrLib.cs" />
+    <Compile Include="Assets\UniLua\LuaTable.cs" />
+    <Compile Include="Assets\UniLua\LuaTableLib.cs" />
+    <Compile Include="Assets\UniLua\OpCodes.cs" />
+    <Compile Include="Assets\UniLua\Parser.cs" />
+    <Compile Include="Assets\UniLua\TagMethod.cs" />
+    <Compile Include="Assets\UniLua\ULDebug.cs" />
+    <Compile Include="Assets\UniLua\Undump.cs" />
+    <Compile Include="Assets\UniLua\Util.cs" />
+    <Compile Include="Assets\UniLua\VM.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2012\UnityVS.CSharp.targets" />
+</Project>

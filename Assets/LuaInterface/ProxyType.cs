@@ -2,7 +2,7 @@ using System;
 using System.Globalization;
 using System.Reflection;
 
-namespace LuaInterface
+namespace UniLuaInterface
 {
 	/// <summary>
 	/// Summary description for ProxyType.

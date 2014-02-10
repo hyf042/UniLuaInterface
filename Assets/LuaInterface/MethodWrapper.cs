@@ -1,4 +1,4 @@
-namespace LuaInterface
+namespace UniLuaInterface
 {
     using System;
     using System.IO;

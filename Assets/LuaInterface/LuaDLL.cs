@@ -6,7 +6,7 @@ using System.Text;
 using UniLua;
 using UnityEngine;
 
-namespace LuaInterface
+namespace UniLuaInterface
 {
     public static class LuaDLL
     {

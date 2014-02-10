@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace LuaInterface
+namespace UniLuaInterface
 {
     /// <summary>
     /// Exceptions thrown by the Lua runtime

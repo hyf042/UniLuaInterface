@@ -6,7 +6,7 @@ using System.Reflection.Emit;
 using System.Threading;
 using UniLua;
 
-namespace LuaInterface
+namespace UniLuaInterface
 {
 	/*
 	 * Structure to store a type and the return types of

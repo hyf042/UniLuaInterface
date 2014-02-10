@@ -1,5 +1,5 @@
 
-namespace LuaInterface 
+namespace UniLuaInterface 
 {    
 	using System;
 	using System.IO;
@@ -86,16 +86,9 @@ namespace LuaInterface
 			LuaDLL.lua_pushstring(luaState, "getmetatable");
 			LuaDLL.lua_getglobal(luaState, "getmetatable");
 			LuaDLL.lua_settable(luaState, -3);
-            int tmp = luaState.GetTop();
             LuaDLL.lua_replaceglobal(luaState);
-            tmp = luaState.GetTop();
 			translator=new ObjectTranslator(this,luaState);
-            tmp = luaState.GetTop();
             LuaDLL.lua_replaceglobal(luaState);
-            tmp = luaState.GetTop();
-            luaState.GetGlobal("luanet");
-            var type = luaState.Type(-1);
-            luaState.Pop(1);
 			LuaDLL.luaL_dostring(luaState, Lua.init_luanet);	// steffenj: lua_dostring renamed to luaL_dostring
 
             // We need to keep this in a managed reference so the delegate doesn't get garbage collected
@@ -544,7 +537,7 @@ namespace LuaInterface
 		 * Calls the object as a function with the provided arguments,
 		 * returning the function's returned values inside an array
 		 */
-		internal object[] callFunction(object function,object[] args) 
+		internal object[] callFunction(object function, params object[] args) 
 		{
             return callFunction(function, args, null);
 		}
